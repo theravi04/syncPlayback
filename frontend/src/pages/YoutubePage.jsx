@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { Youtube, Users, ExternalLink, ArrowLeft, CheckCircle, AlertCircle } from "lucide-react";
-import YouTubePlayer from "../components/YouTubePlayer";
+import YouTubePlayer from "../components/YoutubePlayer";
 import { io } from "socket.io-client";
 
 const YoutubePage = ({ socketUrl }) => {
