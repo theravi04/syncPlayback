@@ -4,7 +4,8 @@ import YoutubePage from "./pages/YoutubePage";
 import SpotifyPage from "./pages/SpotifyPage";
 import LocalFilePage from "./pages/LocalFilePage";
 
-const SOCKET_URL = "http://localhost:5000";
+const SOCKET_URL = "https://syncplayback.onrender.com";
+// const SOCKET_URL = "http://localhost:5000";
 
 export default function App() {
   return (
