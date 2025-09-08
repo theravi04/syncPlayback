@@ -2,6 +2,8 @@ const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
+const multer = require("multer");
+const path = require("path");
 
 const app = express();
 const server = http.createServer(app);
@@ -14,8 +16,8 @@ const io = new Server(server, {
 
 app.use(cors());
 
-// Store state per room
-// Example: rooms[roomId] = { url, time, playing }
+
+
 const rooms = {};
 
 io.on("connection", (socket) => {
