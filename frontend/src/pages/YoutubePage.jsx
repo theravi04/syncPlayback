@@ -27,7 +27,7 @@ const YoutubePage = ({ socketUrl }) => {
       if (!socket.current) {
         socket.current = io(socketUrl);
       }
-      socket.current.emit("join-room", { roomId });
+      socket.current.emit("join-room", roomId );
       setJoinedRoom(true);
 
       socket.current.on("sync-music", (video) => {
