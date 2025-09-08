@@ -31,7 +31,7 @@ const YoutubePage = ({ socketUrl }) => {
       setJoinedRoom(true);
 
       socket.current.on("sync-music", (video) => {
-        console.log("Received sync data:", video);
+        // console.log("Received sync data:", video);
         setVideoUrl(video.url);
       });
     } catch (err) {
