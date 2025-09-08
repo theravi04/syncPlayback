@@ -8,6 +8,12 @@ const YouTubePlayer = ({ socket, roomId, videoUrl }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
+  if (videoUrl) {
+    setIsPlaying(false); 
+  }
+}, [videoUrl]);
+
+  useEffect(() => {
     if (!socket) return;
 
     socket.on("sync-music", ({ url, time, playing }) => {
