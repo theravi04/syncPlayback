@@ -25,7 +25,7 @@ const YoutubePage = ({ socketUrl }) => {
 
     try {
       if (!socket.current) {
-        socket.current = io(socketUrl);
+        socket.current = io(socketUrl, { transports: ["websocket"], withCredentials: true });
       }
       socket.current.emit("join-room", roomId );
       setJoinedRoom(true);

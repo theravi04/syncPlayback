@@ -7,7 +7,8 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*", // allow all origins for testing
+    origin: "https://sync-playback-beta.vercel.app", // allow all origins for testing
+    // origin: "*", // allow all origins for testing
     methods: ["GET", "POST"],
   },
 });
